@@ -46,7 +46,7 @@ function TweetBox({ setTweets }: Props) {
 
         const json = await result.json();
 
-        const newTweets = await fetchTweets();
+        const newTweets = await fetchTweets()
         setTweets(newTweets)
 
         toast('Tweet Posted', {
@@ -58,7 +58,7 @@ function TweetBox({ setTweets }: Props) {
     const handleSubmit = (e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
         e.preventDefault()
 
-        postTweet();
+        postTweet()
 
         setInput('')
         setImage('')
