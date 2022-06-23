@@ -15,4 +15,5 @@ export default NextAuth({
         version: '2.0'
     })
   ],
+  secret: "smece",
 })
