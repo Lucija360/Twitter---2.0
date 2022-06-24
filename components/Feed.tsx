@@ -10,6 +10,13 @@ interface Props {
 }
 
 function Feed({tweets: tweetsProp}: Props) {
+    const SanityClient = require('@sanity/client')
+    const client = new SanityClient({
+    projectId: 'i1k1gjzn',
+    dataset: 'production',
+    useCdn: true
+})
+
     const [tweets, setTweets] =  useState<Tweet[]>(tweetsProp)
     console.log(tweets)
 
